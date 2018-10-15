@@ -18,9 +18,19 @@ Then, start the docker containers by executing the following command:
 
 `docker-compose up -d`
 
+Then, do installation of Node items with this:
+
+`npm install`
+
 Then, you can surf to the application at [http://127.0.0.1:10080](http://127.0.0.1:10080)
 
 If you want, you can add `127.0.0.1 possessor.test` to your `/etc/hosts` file - or configure DNSMasq for this.
+
+### On Going Development
+
+For front end development, watch your code:
+
+`npm run watch`
 
 ### Helpful Tips
 
@@ -29,6 +39,12 @@ To access the PHP docker container as a shell, run the following helper command:
 `bin/php/sh`
 
 [todo]
+
+## Deploy
+
+`npm run dev` for local dev 
+
+`npm run production` to build for production
 
 ## Rationale
 
