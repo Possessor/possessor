@@ -18,6 +18,10 @@ Then, start the docker containers by executing the following command:
 
 `docker-compose up -d`
 
+Then, you can surf to the application at [http://127.0.0.1:10080](http://127.0.0.1:10080)
+
+If you want, you can add `127.0.0.1 possessor.test` to your `/etc/hosts` file - or configure DNSMasq for this.
+
 ### Helpful Tips
 
 To access the PHP docker container as a shell, run the following helper command:
