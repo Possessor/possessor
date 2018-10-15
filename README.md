@@ -18,6 +18,12 @@ Then, start the docker containers by executing the following command:
 
 `docker-compose up -d`
 
+### Helpful Tips
+
+To access the PHP docker container as a shell, run the following helper command:
+
+`bin/php/sh`
+
 [todo]
 
 ## Rationale
