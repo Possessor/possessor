@@ -25,7 +25,11 @@ class MakeClientTest extends TestCase
 
     public function testCreateClientSuccessful(): void
     {
-        $this->artisan('client:create', ['name' => 'Acme Corp', 'domain' => 'acme.com'])
+        $attributes = ['name' => 'Acme Corp', 'domain' => 'acme.com'];
+
+        $this->artisan('client:create', $attributes)
             ->assertExitCode(0);
+
+        $this->assertNotEmpty(Client::where($attributes)->first());
     }
 }
