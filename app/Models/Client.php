@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Client
+ *
  * @package App\Models
+ * @mixin \Eloquent
  */
 class Client extends Model
 {
