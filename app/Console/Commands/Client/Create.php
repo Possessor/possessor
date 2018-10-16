@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Console\Commands\Client;
 
+use App\Models\Client;
 use Illuminate\Console\Command;
 
 /**
@@ -31,10 +32,13 @@ class Create extends Command
     /**
      * Execute the console command.
      *
-     * @return mixed
+     * @return void
      */
-    public function handle()
+    public function handle(): void
     {
-        return true;
+        Client::create([
+            'name' => $this->argument('name'),
+            'domain' => $this->argument('domain')
+        ]);
     }
 }
