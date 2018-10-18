@@ -32,9 +32,11 @@ For front end development, watch your code:
 
 `npm run watch`
 
-Whenever you update or install packages, or modify your database, ide-helper should be ran with this command:
+**Useful `/bin` tools**
 
-`composer ide-helper`
+`bin/php/ide-helper` Whenever you update or install packages, or modify your database, ide-helper should be ran
+
+`bin/php/phpstan` to run static analysis
 
 ### Helpful Tips
 

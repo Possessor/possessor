@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+docker exec -it possessor-php-fpm php ./artisan ide-helper:generate
+docker exec -it possessor-php-fpm php ./artisan ide-helper:meta
+docker exec -it possessor-php-fpm php ./artisan ide-helper:models --write
