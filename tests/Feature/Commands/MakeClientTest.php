@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Tests\Feature\Commands;
 
 use App\Models\Client;
+use Illuminate\Foundation\Testing\PendingCommand;
 use Symfony\Component\Console\Exception\RuntimeException;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -27,8 +28,9 @@ class MakeClientTest extends TestCase
     {
         $attributes = ['name' => 'Acme Corp', 'domain' => 'acme.com'];
 
-        $this->artisan('client:create', $attributes)
-            ->assertExitCode(0);
+        /** @var PendingCommand $res this is necessary to get the phpstan to run */
+        $res = $this->artisan('client:create', $attributes);
+        $res->assertExitCode(0);
 
         $this->assertNotEmpty(Client::where($attributes)->first());
     }
