@@ -32,6 +32,10 @@ For front end development, watch your code:
 
 `npm run watch`
 
+Whenever you update or install packages, or modify your database, ide-helper should be ran with this command:
+
+`composer ide-helper`
+
 ### Helpful Tips
 
 To access the PHP docker container as a shell, run the following helper command:
